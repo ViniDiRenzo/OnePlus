@@ -1,10 +1,11 @@
-import './App.css'
+import './scss/main.scss'
+
 
 function App() {
 
   return (
     <>
-      <h1>There is Nothing Here Yet</h1>
+      <h1>Hello World</h1>
     </>
   )
 }
