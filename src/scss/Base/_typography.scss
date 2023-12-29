@@ -37,5 +37,20 @@ body {
   }
 }
 
+// Hero
+
+.hero {
+  text-align: left;
+  color: $white;
+  text-shadow: 0 0 2px $black;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.hero__text {
+  max-width: 600px;
+}
 
 

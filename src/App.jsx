@@ -1,3 +1,4 @@
+import Hero from './Hero'
 import Navbar from './Navbar'
 import './scss/main.scss'
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <header>
         <Navbar/>
+        <Hero />
       </header>
     </>
   )
