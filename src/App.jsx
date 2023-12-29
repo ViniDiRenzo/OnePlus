@@ -1,3 +1,4 @@
+import Navbar from './Navbar'
 import './scss/main.scss'
 
 
@@ -5,7 +6,9 @@ function App() {
 
   return (
     <>
-      <h1>Hello World</h1>
+      <header>
+        <Navbar/>
+      </header>
     </>
   )
 }
