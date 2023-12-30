@@ -1,12 +1,12 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 
 const menu = [
   'Home',
   'About',
-  'Contact',
-  'Goals',
-  'Carrers'
+  'Projects',
+  'Contact'
 ]
 
 function Menu() {
@@ -17,7 +17,17 @@ function Menu() {
     <>
       <ul className={'nav__menu' + (open ? ' open' : '')}>
         {menu.map(item => {
-          return <li key={item} className="nav__link"><a href="#">{item}</a></li>
+          return (
+            <li key={item} className="nav__link">
+              <Link 
+                onClick={() => {
+                  if (!open) return
+                  setOpen(!open)
+                }}
+                to={'/' + item.toLowerCase()}>{item}
+              </Link>
+            </li>
+          )
         })}
       </ul>
        <div className={"hamburger" + (open ? ' open' : '')} onClick={() => setOpen(!open)}>

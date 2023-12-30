@@ -4,7 +4,6 @@ import Menu from "./Menu"
 
 function Navbar() {
 
-
   return (
     <nav className="nav">
       <Logo />

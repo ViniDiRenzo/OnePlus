@@ -1,8 +1,9 @@
 
+import { Link } from 'react-router-dom'
 
 function Logo() {
   return (
-    <div className="logo"><a href="#">+1 Drywall</a></div>
+    <div className="logo"><Link to="/">+1 Drywall</Link></div>
   )
 }
 
