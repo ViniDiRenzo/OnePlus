@@ -1,8 +1,11 @@
-@use './Abstracts/resets';
+
+@use './Utilities';
+@use './Abstracts';
 @use './Base/typography';
 
 @use './Components/nav';
 @use './Components/hambuger';
 @use './Components/hero';
 @use './Components/banner';
-
+@use './Components/buttons';
+@use './Components/contactForm';

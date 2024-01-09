@@ -1,0 +1,28 @@
+
+
+@use '../Abstracts/' as *;
+
+
+.btn {
+  padding: 1rem;
+  border: 1px solid $black;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  &--send {
+    background-color: $white;
+    
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+    
+    &:focus-within {
+      outline: 2px solid $black;
+    }
+    
+    @media (min-width: 1024px) {
+      width: 50%;
+    }
+  }
+}

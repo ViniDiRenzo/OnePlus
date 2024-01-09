@@ -1,35 +1,43 @@
-
-import Banner from "../Banner"
+import Banner from "../Banner";
 
 function About() {
   return (
     <>
       <Banner pageName="About" imageUrl="/src/assets/banner-image-1.jpg" />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quam
-        excepturi velit assumenda dolor, reprehenderit harum illo tenetur
-        voluptate? Totam, iure suscipit excepturi ducimus, natus sit
-        exercitationem illo cupiditate dolore a cum. Saepe iusto asperiores
-        cupiditate excepturi omnis consectetur possimus quia, recusandae impedit
-        nihil distinctio dolores earum esse, rem repellendus, eius illo dolore
-        corrupti quo dolor sit deserunt? Enim, aliquam. Consectetur ipsa aliquam
-        adipisci atque incidunt eaque sequi magnam exercitationem officiis
-        itaque ut repellendus quasi, ullam unde dolor neque? Totam harum
-        molestias inventore, nisi a, ad ipsa doloremque unde, suscipit veritatis
-        alias! Eos optio iusto magni maxime vero earum nesciunt nisi repudiandae
-        quo fuga a ut debitis, hic enim, consequatur dicta ipsa doloremque quae
-        quos et doloribus modi accusantium obcaecati! Nemo quidem totam sequi
-        amet at ullam consectetur expedita, iure eaque aliquid dolores unde
-        voluptatem dolore corrupti qui odio excepturi vero ipsam alias vitae cum
-        ex? Rerum aliquid delectus odit et, corporis illo tempore cum
-        accusantium laborum necessitatibus minima deserunt fugiat magni possimus
-        eaque! Doloremque, ex! Praesentium porro corporis, quidem consequuntur
-        molestiae eius numquam minus impedit sunt nostrum eveniet doloribus
-        tempora libero in vel pariatur recusandae mollitia, totam ducimus at
-        repellat maiores alias veritatis. Adipisci, quasi vero? Id, sint quia?
-      </p>
+      <div className="block">
+        <h3 className="heading">Something</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+          architecto aspernatur quibusdam iure minima doloribus ex eius voluptas
+          facere provident nemo expedita quas ab alias reiciendis, asperiores
+          quos. Totam, optio officia quas, voluptatibus nobis aperiam tenetur
+          sit minima dolorum accusantium nemo maxime. Consequatur odit nostrum
+          aliquid nobis, ex est voluptatum iusto, pariatur sunt, sint natus.
+          Dolor obcaecati similique, nisi expedita eos veritatis, molestias
+          nihil labore id magni vitae! Est alias incidunt officia ipsum
+          quibusdam maxime voluptate qui sit quod dolore commodi, laboriosam
+          quae fuga accusamus corrupti dolorem, iusto quaerat natus, ratione hic
+          molestias voluptates. Neque facilis quasi consectetur illum ut!
+        </p>
+      </div>
+      <div className="block">
+        <h3 className="heading">Something Else</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+          architecto aspernatur quibusdam iure minima doloribus ex eius voluptas
+          facere provident nemo expedita quas ab alias reiciendis, asperiores
+          quos. Totam, optio officia quas, voluptatibus nobis aperiam tenetur
+          sit minima dolorum accusantium nemo maxime. Consequatur odit nostrum
+          aliquid nobis, ex est voluptatum iusto, pariatur sunt, sint natus.
+          Dolor obcaecati similique, nisi expedita eos veritatis, molestias
+          nihil labore id magni vitae! Est alias incidunt officia ipsum
+          quibusdam maxime voluptate qui sit quod dolore commodi, laboriosam
+          quae fuga accusamus corrupti dolorem, iusto quaerat natus, ratione hic
+          molestias voluptates. Neque facilis quasi consectetur illum ut!
+        </p>
+      </div>
     </>
   );
 }
 
-export default About
+export default About;

@@ -10,8 +10,16 @@
   padding: 1.2rem;
   position: relative;
 
+  @media (min-width: 768px) {
+    padding: 1.5rem 3rem;
+  }
+
   @media (min-width: 1024px) {
-    padding: 1.2rem 5rem;
+    padding: 1.8rem 5rem;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 2rem 10rem;
   }
   
   &__menu {
@@ -54,6 +62,7 @@
 
   &__link a {
     position: relative;
+    outline-offset: 5px;
 
     &::before {
       content: '';
