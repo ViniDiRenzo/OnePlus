@@ -1,42 +1,40 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-
-const menu = [
-  'Home',
-  'About',
-  'Projects',
-  'Contact'
-]
+const menu = ["Home", "About", "Projects", "Contact"];
 
 function Menu() {
-
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <>
-      <ul className={'nav__menu' + (open ? ' open' : '')}>
-        {menu.map(item => {
+      <ul className={"menu" + (open ? " open" : "")}>
+        {menu.map((item) => {
           return (
-            <li key={item} className="nav__link">
-              <Link 
+            <li key={item} className="menu__link">
+              <Link
                 onClick={() => {
-                  if (!open) return
-                  setOpen(!open)
+                  if (!open) return;
+                  setOpen(!open);
                 }}
-                to={'/' + item.toLowerCase()}>{item}
+                to={"/" + item.toLowerCase()}
+              >
+                {item}
               </Link>
             </li>
-          )
+          );
         })}
       </ul>
-       <div className={"hamburger" + (open ? ' open' : '')} onClick={() => setOpen(!open)}>
+      <div
+        className={"hamburger" + (open ? " open" : "")}
+        onClick={() => setOpen(!open)}
+      >
         <span className="line top"></span>
         <span className="line mid"></span>
         <span className="line bot"></span>
       </div>
-    </>  
-  )
+    </>
+  );
 }
 
-export default Menu
+export default Menu;

@@ -6,13 +6,24 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 800px;
 
+  @media (min-width: 768px) {
+    align-items: center;
+  }
+  
   &__section {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     text-align: left;
+
+    @media (min-width: 768px) {
+      width: 60%;
+    }
+
+    @media (min-width: 1024px) {
+      width: 45%;
+    }
   }
 
   & textarea {
@@ -33,5 +44,28 @@
     &:focus-within {
       outline: 2px solid $black;
     }
+  }  
+}
+
+
+@media (min-width: 1024px) {
+  
+  .form {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .form-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }

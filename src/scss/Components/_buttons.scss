@@ -10,6 +10,7 @@
   cursor: pointer;
   
   &--send {
+    color: $black;
     background-color: $white;
     
     &:hover {
@@ -21,8 +22,13 @@
       outline: 2px solid $black;
     }
     
+    @media (min-width: 768px) {
+      width: 60%;
+    }
+
     @media (min-width: 1024px) {
-      width: 50%;
+      width: 45%;
+      margin-left: auto;
     }
   }
 }
