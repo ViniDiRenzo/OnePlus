@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Navbar from "./components/Navbar";
 
 const routes = (
   <Routes>
@@ -17,6 +18,7 @@ const routes = (
 function App() {
   return (
     <>
+      <Navbar />
       <div className="block">{routes}</div>
     </>
   );
