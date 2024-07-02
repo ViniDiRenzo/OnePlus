@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 
-function Hamburger({ open, setOpen, screenWidth }) {
+function Hamburger({ open, setOpen }) {
   return (
     <div
-      className={`w-7 h-8 flex flex-col justify-around items-center cursor-pointer overflow-hidden ${
-        screenWidth >= 768 ? "hidden" : ""
-      }`}
+      className="w-7 h-8 flex flex-col justify-around items-center cursor-pointer overflow-hidden md:hidden"
       onClick={() => setOpen(!open)}
     >
       <div
