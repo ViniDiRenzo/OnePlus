@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const routes = (
   <Routes>
@@ -19,7 +20,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="block">{routes}</div>
+      <div>{routes}</div>
+      <Footer />
     </>
   );
 }

@@ -7,7 +7,9 @@ function Navbar() {
 
   return (
     <nav className="block py-5 bg-blue-100 flex justify-between relative">
-      <div className="text-3xl font-bold">+1 Drywall</div>
+      <div className="text-4xl">
+        <Link to="/">+1 Drywall</Link>
+      </div>
       <Hamburger open={open} setOpen={setOpen} />
       <div
         className={`bg-blue-100 duration-300 p-6 absolute top-16 left-0 right-0 md:p-0 md:static md:translate-x-0 ${
