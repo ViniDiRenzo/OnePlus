@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./utils/ScrollToTop";
 
 const routes = (
   <Routes>
@@ -20,6 +21,8 @@ function App() {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
+
       <div>{routes}</div>
       <Footer />
     </>

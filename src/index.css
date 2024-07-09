@@ -10,13 +10,13 @@
   }
 
   body {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 @layer components {
   .block {
-    @apply px-8 py-12 text-center md:px-16 xl:px-24 md:text-left
+    @apply px-8 py-12  md:px-16 xl:px-24 
   }
 
   .header {
@@ -33,5 +33,17 @@
 
   .nav-link {
     @apply after:bg-black after:h-[3px] after:absolute after:left-0 after:right-0 after:bottom-[-3px] after:rounded after:origin-left after:scale-x-0 after:duration-200 hover:after:scale-x-100
+  }
+
+  .form-group {
+    @apply flex flex-col gap-2 mb-4
+  }
+
+  .form-label {
+    @apply text-2xl
+  }
+
+  .input {
+    @apply px-2 py-1 border-2 border-gray-200 rounded-md placeholder:text-lg placeholder:opacity-70 focus:outline-none focus:border-black focus:placeholder:opacity-30
   }
 }

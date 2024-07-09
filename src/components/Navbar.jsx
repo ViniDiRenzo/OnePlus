@@ -6,14 +6,14 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="block py-5 bg-blue-100 flex justify-between relative">
+    <nav className="block py-5 flex justify-between relative ">
       <div className="text-4xl">
         <Link to="/">+1 Drywall</Link>
       </div>
       <Hamburger open={open} setOpen={setOpen} />
       <div
-        className={`bg-blue-100 duration-300 p-6 absolute top-16 left-0 right-0 md:p-0 md:static md:translate-x-0 ${
-          open ? "translate-x-0" : "-translate-x-full"
+        className={`bg-white duration-300 p-6 absolute top-16 left-0 right-0 md:p-0 md:static md:translate-x-0 ${
+          open ? "translate-x-0 " : "-translate-x-full"
         }`}
       >
         <ul className={`flex items-center gap-5 text-2xl flex-col md:flex-row`}>
