@@ -1,10 +1,12 @@
 import React from "react";
+import Hero from "../components/Hero";
 
 function Home() {
   return (
     <>
+      <Hero />
       <div className="block">
-        <h1 className="header">Home</h1>
+        <h2 className="heading">Eita Porra</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ad
           fugit provident perspiciatis doloribus iste expedita sapiente

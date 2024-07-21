@@ -8,7 +8,7 @@ function Footer() {
     <>
       <footer className="block pt-20 pb-12 flex flex-col gap-12 bg-black text-white  md:flex-row md:justify-between">
         <div className="border-b-2 border-color-white w-max h-max pb-3 mx-auto md:mx-0">
-          <div className="text-center md:text-left text-4xl mb-8">
+          <div className="text-center md:text-left text-4xl mb-8 font-bold">
             <Link to="/">+1 Drywall</Link>
           </div>
           <p className="flex justify-center items-center md:justify-start">

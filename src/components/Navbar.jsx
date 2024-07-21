@@ -7,7 +7,7 @@ function Navbar() {
 
   return (
     <nav className="block py-5 flex justify-between relative ">
-      <div className="text-4xl">
+      <div className="text-4xl font-bold">
         <Link to="/">+1 Drywall</Link>
       </div>
       <Hamburger open={open} setOpen={setOpen} />
