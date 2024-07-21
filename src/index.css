@@ -46,4 +46,8 @@
   .input {
     @apply px-2 py-1 border-2 border-gray-200 rounded-md placeholder:text-lg placeholder:opacity-70 focus:outline-none focus:border-black focus:placeholder:opacity-30
   }
+
+  .slider-btn {
+    @apply text-white text-2xl absolute top-[50%] translate-y-[-50%] cursor-pointer h-full duration-200 hover:bg-secondary px-6
+  }
 }

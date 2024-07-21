@@ -1,4 +1,5 @@
 import React from "react";
+import Gallery from "../components/Gallery";
 
 function Projects() {
   return (
@@ -14,6 +15,7 @@ function Projects() {
           dolorem illum magni quo, atque aut.
         </p>
       </div>
+      <Gallery />
     </>
   );
 }
