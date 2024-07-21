@@ -12,7 +12,7 @@ function Navbar() {
       </div>
       <Hamburger open={open} setOpen={setOpen} />
       <div
-        className={`bg-white duration-300 p-6 absolute top-16 left-0 right-0 md:p-0 md:static md:translate-x-0 ${
+        className={`bg-white duration-300 p-6 absolute top-16 left-0 right-0 md:p-0 md:static md:translate-x-0 z-10 ${
           open ? "translate-x-0 " : "-translate-x-full"
         }`}
       >

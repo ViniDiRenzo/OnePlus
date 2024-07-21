@@ -1,9 +1,15 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
+import Banner from "../components/Banner";
 
 function Contact() {
   return (
     <>
+      <Banner
+        pageName="Contact"
+        image="./assets/images/project-one/image-5.webp"
+      />
+
       <div className="block">
         <h1 className="header">Contact</h1>
         <p>

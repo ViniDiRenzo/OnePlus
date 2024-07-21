@@ -1,8 +1,13 @@
 import React from "react";
+import Banner from "../components/Banner";
 
 function About() {
   return (
     <>
+      <Banner
+        pageName="About"
+        image="./assets/images/project-one/image-2.webp"
+      />
       <div className="block">
         <h1 className="header">About</h1>
         <p>

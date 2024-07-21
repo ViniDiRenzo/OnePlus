@@ -1,9 +1,15 @@
 import React from "react";
 import Gallery from "../components/Gallery";
+import Banner from "../components/Banner";
 
 function Projects() {
   return (
     <>
+      <Banner
+        pageName="Projects"
+        image="./assets/images/project-two/image-8.webp"
+      />
+
       <div className="block">
         <h1 className="header">Projects</h1>
         <p>
