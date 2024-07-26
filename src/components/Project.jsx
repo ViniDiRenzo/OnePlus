@@ -77,7 +77,7 @@ function Project({ images, name }) {
           <p className="text-white absolute top-44 md:top-10 left-[50%] translate-x-[-50%]">
             Click image to Close.
           </p>
-          <div className="h-80 md:h-full rounded-md flex overflow-hidden relative">
+          <div className="h-80 md:h-full rounded-md flex overflow-hidden relative shadow-2xl shadow-primary">
             {images.map((image, index) => {
               return (
                 <img

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useRef } from "react";
+import validateEmail from "../helpers/validateEmail";
 
 function ContactForm() {
   const formRef = useRef();
@@ -10,26 +11,26 @@ function ContactForm() {
   const [message, setMessage] = useState();
   const [error, setError] = useState();
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     const formData = new FormData(formRef.current);
-    const data = Object.fromEntries(formData);
+    // const data = Object.fromEntries(formData);
 
     if (!name) {
       setError("Please enter your Name.");
       return;
     }
 
-    if (!email) {
-      setError("Please enter your Email.");
+    if (!validateEmail(email)) {
+      setError("Please enter a valid Email.");
       return;
     }
 
-    if (!phone) {
-      setError("Please enter your Phone Number.");
-      return;
-    }
+    // if (!phone) {
+    //   setError("Please enter your Phone Number.");
+    //   return;
+    // }
 
     if (!message) {
       setError("Don't forget your Message!");
@@ -38,14 +39,40 @@ function ContactForm() {
 
     setError("");
 
-    console.log(data);
+    const serviceId = "service_5dudeyj";
+    const templateId = "contact_form";
+    const userId = "sQgjUxAx1Q2yOk-D3";
+    const url = "https://api.emailjs.com/api/v1.0/email/send";
+
+    const params = {
+      service_id: serviceId,
+      template_id: templateId,
+      user_id: userId,
+      template_params: {
+        name: name,
+        email: email,
+        message: message,
+      },
+    };
+
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(params),
+    };
+
+    const response = await fetch(url, options);
+
+    formRef.current.reset();
   }
 
   return (
     <div className="block">
       <h2 className="heading">Get in Toch</h2>
       <form onSubmit={handleSubmit} ref={formRef} className="text-left form">
-        <div className=" md:flex justify-between gap-24">
+        <div className=" md:flex justify-between gap-24 relative">
           <div className="w-full">
             <div className="form-group">
               <label className="form-label" htmlFor="name">
@@ -73,7 +100,7 @@ function ContactForm() {
                 placeholder="Your email"
               />
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label className="form-label" htmlFor="phone">
                 Your phone number
               </label>
@@ -85,7 +112,7 @@ function ContactForm() {
                 id="phone"
                 placeholder="Your phone number"
               />
-            </div>
+            </div> */}
           </div>
           <div className="w-full">
             <div className="form-group">
@@ -102,8 +129,10 @@ function ContactForm() {
               ></textarea>
             </div>
           </div>
+          {error && (
+            <p className="text-red-500 absolute bottom-0 left-0">{error}</p>
+          )}
         </div>
-        {error && <p className="text-red-500">{error}</p>}
         <button className="bg-black text-white px-6 py-2 rounded-md w-full mt-8 hover:text-black hover:bg-white hover:ring-2 hover:ring-black hover:ring-inset md:w-[35%]">
           Send Message
         </button>
