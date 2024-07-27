@@ -13,7 +13,7 @@ function Projects() {
       />
 
       <div className="block">
-        <h2 className="heading">Oloko meu</h2>
+        <h2 className="heading">Heading</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
           ipsum voluptas, praesentium omnis error amet vero cupiditate dicta
@@ -40,7 +40,7 @@ function Projects() {
         </p>
       </div>
       <div className="block">
-        <h2 className="heading">ViSH MARIA</h2>
+        <h2 className="heading">Another Heading</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ad
           fugit provident perspiciatis doloribus iste expedita sapiente
@@ -51,7 +51,7 @@ function Projects() {
         </p>
       </div>
       <div className="block">
-        <h2 className="heading">RAAAPAAAAZZZ</h2>
+        <h2 className="heading">Yet Another Heading</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae corrupti
           repudiandae perspiciatis vero delectus, quam ipsum eos et velit eum,

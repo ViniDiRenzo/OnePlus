@@ -11,7 +11,7 @@ function About() {
         objectPosition="object-center"
       />
       <div className="block">
-        <h2 className="heading">Chuuups</h2>
+        <h2 className="heading">Heading</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ad
           fugit provident perspiciatis doloribus iste expedita sapiente
@@ -22,7 +22,7 @@ function About() {
         </p>
       </div>
       <div className="block">
-        <h2 className="heading">Xablauu</h2>
+        <h2 className="heading">Heading</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ad
           fugit provident perspiciatis doloribus iste expedita sapiente
@@ -38,7 +38,7 @@ function About() {
         </p>
       </div>
       <div className="block">
-        <h2 className="heading">AAAHHINNN</h2>
+        <h2 className="heading">Heading</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ad
           fugit provident perspiciatis doloribus iste expedita sapiente

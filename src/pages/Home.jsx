@@ -6,7 +6,7 @@ function Home() {
     <>
       <Hero />
       <div className="block">
-        <h2 className="heading">Eita Porra</h2>
+        <h2 className="heading">Heading</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ad
           fugit provident perspiciatis doloribus iste expedita sapiente
@@ -17,7 +17,7 @@ function Home() {
         </p>
       </div>
       <div className="block">
-        <h2 className="heading">Fala comigo</h2>
+        <h2 className="heading">Another Heading</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ad
           fugit provident perspiciatis doloribus iste expedita sapiente

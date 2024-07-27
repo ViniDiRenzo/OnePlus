@@ -13,9 +13,9 @@ function Gallery() {
         nostrum autem recusandae officiis rerum tenetur voluptas sint
         consectetur velit.
       </p>
-      <Project name={"Projetinho numerinho 1"} images={projectOne} />
-      <Project name={"Projetinho numerinho 2"} images={projectTwo} />
-      <Project name={"Projetinho numerinho 3"} images={projectThree} />
+      <Project name={"Project One"} images={projectOne} />
+      <Project name={"Project Two"} images={projectTwo} />
+      <Project name={"Project Three"} images={projectThree} />
     </div>
   );
 }
