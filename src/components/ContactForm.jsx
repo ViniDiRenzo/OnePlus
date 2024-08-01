@@ -1,20 +1,42 @@
 import React, { useState } from "react";
 import { useRef } from "react";
 import validateEmail from "../helpers/validateEmail";
+import Toast from "./Toast";
 
 function ContactForm() {
   const formRef = useRef();
 
   const [name, setName] = useState();
   const [email, setEmail] = useState();
-  const [phone, setPhone] = useState();
+  // const [phone, setPhone] = useState();
   const [message, setMessage] = useState();
   const [error, setError] = useState();
+
+  const [showToast, setShowToast] = useState({
+    isShown: false,
+    message: "",
+    type: "success",
+  });
+
+  const showToastMessage = (message, type) => {
+    setShowToast({
+      isShown: true,
+      message,
+      type,
+    });
+  };
+
+  const closeToastMessage = () => {
+    setShowToast({
+      isShown: false,
+      message: "",
+    });
+  };
 
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const formData = new FormData(formRef.current);
+    // const formData = new FormData(formRef.current);
     // const data = Object.fromEntries(formData);
 
     if (!name) {
@@ -39,33 +61,44 @@ function ContactForm() {
 
     setError("");
 
-    const serviceId = "service_5dudeyj";
-    const templateId = "contact_form";
-    const userId = "sQgjUxAx1Q2yOk-D3";
-    const url = "https://api.emailjs.com/api/v1.0/email/send";
+    try {
+      const serviceId = "service_5dudeyj";
+      const templateId = "contact_form";
+      const userId = "sQgjUxAx1Q2yOk-D3";
+      const url = "https://api.emailjs.com/api/v1.0/email/send";
 
-    const params = {
-      service_id: serviceId,
-      template_id: templateId,
-      user_id: userId,
-      template_params: {
-        name: name,
-        email: email,
-        message: message,
-      },
-    };
+      const params = {
+        service_id: serviceId,
+        template_id: templateId,
+        user_id: userId,
+        template_params: {
+          name: name,
+          email: email,
+          message: message,
+        },
+      };
 
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(params),
-    };
+      const options = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(params),
+      };
 
-    const response = await fetch(url, options);
+      const response = await fetch(url, options);
 
-    formRef.current.reset();
+      if (response.ok) {
+        showToastMessage("Message sent succesfully!");
+      } else {
+        throw new Error(response.status);
+      }
+
+      formRef.current.reset();
+    } catch (error) {
+      showToastMessage("Oops, something went Wrong.", "fail");
+      console.error("Error in Fetch", error);
+    }
   }
 
   return (
@@ -130,13 +163,21 @@ function ContactForm() {
             </div>
           </div>
           {error && (
-            <p className="text-red-500 absolute bottom-0 left-0">{error}</p>
+            <p className="text-red-500 absolute -bottom-8 md:bottom-0 left-[50%] translate-x-[-50%] md:translate-x-0 md:left-0 w-full text-center md:text-left">
+              {error}
+            </p>
           )}
         </div>
         <button className="bg-black text-white px-6 py-2 rounded-md w-full mt-8 hover:text-black hover:bg-white hover:ring-2 hover:ring-black hover:ring-inset md:w-[35%]">
           Send Message
         </button>
       </form>
+      <Toast
+        isShown={showToast.isShown}
+        message={showToast.message}
+        type={showToast.type}
+        onClose={closeToastMessage}
+      />
     </div>
   );
 }
