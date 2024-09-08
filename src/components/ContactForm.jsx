@@ -103,7 +103,7 @@ function ContactForm() {
 
   return (
     <div className="block">
-      <h2 className="heading">Get in Toch</h2>
+      <h2 className="heading">Get in Touch</h2>
       <form onSubmit={handleSubmit} ref={formRef} className="text-left form">
         <div className=" md:flex justify-between gap-24 relative">
           <div className="w-full">

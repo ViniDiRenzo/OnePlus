@@ -50,22 +50,7 @@ function Projects() {
           dolorem illum magni quo, atque aut.
         </p>
       </div>
-      <div className="block">
-        <h2 className="heading">Yet Another Heading</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae corrupti
-          repudiandae perspiciatis vero delectus, quam ipsum eos et velit eum,
-          officia veniam sequi hic asperiores dolores obcaecati blanditiis in,
-          rem exercitationem nesciunt accusantium aliquam perferendis tempore.
-          Quasi nemo itaque a non hic voluptate dolores debitis quis voluptates
-          doloribus animi mollitia fuga ducimus qui, aspernatur ratione autem
-          earum, nostrum deleniti assumenda tempora, illo eos architecto!
-          Temporibus architecto suscipit, nulla quia sunt beatae labore autem,
-          ab maxime atque quas expedita, magni culpa nihil assumenda molestiae
-          facilis ex ratione adipisci! Similique, explicabo aperiam magnam
-          voluptate quis at. Nobis fugit voluptates maiores fugiat dignissimos.
-        </p>
-      </div>
+
       <Gallery />
     </>
   );

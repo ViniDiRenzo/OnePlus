@@ -23,7 +23,7 @@ function Contact() {
           dolorem illum magni quo, atque aut.
         </p>
       </div>
-      <div className="block">
+      {/* <div className="block">
         <h2 className="heading">Heading</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
@@ -36,7 +36,7 @@ function Contact() {
           nesciunt culpa? Blanditiis beatae ipsa soluta delectus quas
           perspiciatis doloremque totam, maxime ipsam recusandae.
         </p>
-      </div>
+      </div> */}
       <div className="block">
         <h2 className="heading">Where to find us</h2>
         <iframe

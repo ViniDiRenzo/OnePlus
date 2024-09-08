@@ -1,5 +1,8 @@
 import React from "react";
 import Hero from "../components/Hero";
+import CallToContact from "../components/CallToContact";
+import CallToGallery from "../components/CallToGallery";
+import Services from "../components/Services";
 
 function Home() {
   return (
@@ -16,6 +19,8 @@ function Home() {
           dolorem illum magni quo, atque aut.
         </p>
       </div>
+      <Services />
+      <CallToContact />
       <div className="block">
         <h2 className="heading">Another Heading</h2>
         <p>
@@ -27,6 +32,7 @@ function Home() {
           dolorem illum magni quo, atque aut.
         </p>
       </div>
+      <CallToGallery />
     </>
   );
 }

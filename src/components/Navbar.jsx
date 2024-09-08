@@ -6,7 +6,7 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="block py-5 flex justify-between relative ">
+    <nav className="block py-8 flex justify-between relative ">
       <div className="text-4xl font-bold">
         <Link to="/">+1 Drywall</Link>
       </div>

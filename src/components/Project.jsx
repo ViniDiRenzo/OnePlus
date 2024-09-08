@@ -37,10 +37,14 @@ function Project({ images, name }) {
     <div className="px-4 py-6 shadow-2xl rounded-md mt-12 overflow-hidden">
       <div className="md:flex md:gap-8 mb-4">
         <div
-          className="mb-8 md:mb-0 w-80 rounded-md overflow-hidden cursor-pointer"
+          className="mb-8 md:mb-0 w-80 overflow-hidden cursor-pointer rounded-md"
           onClick={() => handleOpenModal(0)}
         >
-          <img src={images[0]} alt="" />
+          <img
+            src={images[0]}
+            alt=""
+            className="duration-300 hover:scale-[1.03]"
+          />
         </div>
         <div>
           <h3 className="font-bold text-3xl mb-4">{name}</h3>
