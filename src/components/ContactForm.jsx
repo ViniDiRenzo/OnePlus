@@ -6,11 +6,11 @@ import Toast from "./Toast";
 function ContactForm() {
   const formRef = useRef();
 
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   // const [phone, setPhone] = useState();
-  const [message, setMessage] = useState();
-  const [error, setError] = useState();
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   const [showToast, setShowToast] = useState({
     isShown: false,
@@ -64,7 +64,7 @@ function ContactForm() {
     try {
       const serviceId = "service_5dudeyj";
       const templateId = "contact_form";
-      const userId = "sQgjUxAx1Q2yOk-D3";
+      const userId = "GNQ4sdTbtQCzpJoIE";
       const url = "https://api.emailjs.com/api/v1.0/email/send";
 
       const params = {
@@ -91,7 +91,7 @@ function ContactForm() {
       if (response.ok) {
         showToastMessage("Message sent succesfully!");
       } else {
-        throw new Error(response.status);
+        throw new Error(response);
       }
 
       formRef.current.reset();

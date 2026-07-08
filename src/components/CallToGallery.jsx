@@ -13,7 +13,7 @@ function CallToGallery() {
         to="/projects"
         className="flex gap-4 bg-white text-primary font-bold px-4 py-2 rounded-md w-fit"
       >
-        See more! <FaArrowRight size={24} />
+        See more !<FaArrowRight size={24} />
       </Link>
     </div>
   );

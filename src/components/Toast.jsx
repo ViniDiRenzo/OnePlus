@@ -7,6 +7,7 @@ function Toast({ isShown, message, type, onClose }) {
     const timeoutID = setTimeout(() => {
       onClose();
     }, 3000);
+    console.log("dsadhasd");
 
     return () => {
       clearTimeout(timeoutID);
